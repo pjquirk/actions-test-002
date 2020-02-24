@@ -11,8 +11,8 @@ jobs:
 
     runs-on: ubuntu-latest
     env:
-      test1: ${{ not_empty && "is not empty" }}
-      test2: ${{ empty && "is empty" }}
+      test1: ${{ env.not_empty && "is not empty" }}
+      test2: ${{ env.empty && "is empty" }}
       
     steps:
       - name: Dump GitHub context
