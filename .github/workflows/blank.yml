@@ -1,0 +1,22 @@
+name: CI
+env:
+  not_empty: "not empty"
+  empty: ""
+  
+on: [push]
+
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    env:
+      test1: ${{ job.not_empty && "is not empty" }}
+      test2: ${{ job.empty && "is empty" }}
+      
+    steps:
+    - uses: actions/checkout@v2    
+    - name: Run a one-line script
+      run: |
+        echo Test1: $TEST1
+        echo Test2: $TEST2
