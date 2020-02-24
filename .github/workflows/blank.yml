@@ -10,9 +10,9 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-    #env:
-      #test1: ${{ job.not_empty && "is not empty" }}
-      #test2: ${{ job.empty && "is empty" }}
+    env:
+      test1: ${{ not_empty && "is not empty" }}
+      test2: ${{ empty && "is empty" }}
       
     steps:
       - name: Dump GitHub context
