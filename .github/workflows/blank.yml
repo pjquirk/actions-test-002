@@ -35,8 +35,6 @@ jobs:
         env:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
         run: echo "$STRATEGY_CONTEXT"
-      - uses: actions/checkout@v2    
-      - name: Run a one-line script
-        run: |
-          echo Test1: $TEST1
-          echo Test2: $TEST2
+      - uses: actions/checkout@v2
+      - run: curl https://username:password@example.com
+      - run: curl https://${{ secrets.USERNAME }}:${{ secrets.PASSWORD }}@example.com
