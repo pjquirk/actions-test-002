@@ -33,4 +33,3 @@ jobs:
         run: echo "$STRATEGY_CONTEXT"
       - uses: actions/checkout@v2
       - run: curl https://username:password@example.com
-      - run: curl https://${{ secrets.USERNAME }}:${{ secrets.PASSWORD }}@example.com
