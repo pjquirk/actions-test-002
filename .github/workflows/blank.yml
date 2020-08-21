@@ -32,4 +32,4 @@ jobs:
           STRATEGY_CONTEXT: ${{ toJson(strategy) }}
         run: echo "$STRATEGY_CONTEXT"
       - uses: actions/checkout@v2
-      - run: curl https://username:password@example.com
+      - run: curl mongodb://username:password@example.com
